@@ -466,7 +466,7 @@ html.dark .bk{background:radial-gradient(circle,rgba(255,220,190,.85),rgba(232,1
 
   // ---------- scenes ----------
   var scenes=[].slice.call(document.querySelectorAll('.scene'));
-  var DUR=[4000,4000,5500,4200,5200,4500,0];
+  var DUR=[0,4000,5500,4200,5200,4500,0];
   var bars=document.getElementById('bars');
   bars.innerHTML=scenes.map(function(){return '<span><i></i></span>'}).join('');
   var fills=[].slice.call(bars.querySelectorAll('i'));
@@ -476,7 +476,7 @@ html.dark .bk{background:radial-gradient(circle,rgba(255,220,190,.85),rgba(232,1
     fills.forEach(function(f,k){f.style.transition='none';f.style.transform='scaleX('+(k<cur?1:0)+')'});
     var f=fills[cur];void f.offsetWidth;
     if(DUR[cur]){f.style.transition='transform '+DUR[cur]+'ms linear';f.style.transform='scaleX(1)'}
-    else f.style.transform='scaleX(1)';
+    else f.style.transform='scaleX('+(cur===0?0:1)+')';
   }
   function go(i){
     if(i<0||i>=scenes.length||i===cur)return;
@@ -516,6 +516,7 @@ html.dark .bk{background:radial-gradient(circle,rgba(255,220,190,.85),rgba(232,1
   // ---------- tap / swipe ----------
   var sx=0,sy=0;
   document.addEventListener('pointerdown',function(e){sx=e.clientX;sy=e.clientY});
+  ['touchend','click','keydown'].forEach(function(ev){document.addEventListener(ev,function(e){if(!e.target.closest||!e.target.closest('#mus'))startMusic()},{passive:true})});
   document.addEventListener('pointerup',function(e){
     if(e.target.closest('.nogo'))return;
     var dx=e.clientX-sx,dy=e.clientY-sy;
