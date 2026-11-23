@@ -11,7 +11,7 @@
 var m=document.querySelector('meta[name=theme-color]');if(m)m.content=t==='dark'?'#2B0F1C':(t==='ivory'?'#FBF6EF':'#FDE6DC');})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bona+Nova:wght@400;700&family=Frank+Ruhl+Libre:wght@400;500;700&family=Heebo:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bona+Nova:wght@400;700&family=Heebo:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#3B2029;--ink-soft:#7A5560;--rose:#C27A6B;--rose-deep:#A2523F;--plum:#7E3F5C;
@@ -20,7 +20,7 @@ var m=document.querySelector('meta[name=theme-color]');if(m)m.content=t==='dark'
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{height:100%;overflow:hidden;overscroll-behavior:none}
-body{background:#FDF3EC;color:var(--ink);font-family:'Frank Ruhl Libre',serif;line-height:1.6;
+body{background:#FDF3EC;color:var(--ink);font-family:'Bona Nova',serif;font-weight:700;line-height:1.6;
   -webkit-font-smoothing:antialiased;font-variant-numeric:lining-nums;touch-action:manipulation;user-select:none;-webkit-user-select:none}
 
 /* ===== living background ===== */
@@ -85,7 +85,7 @@ body{background:#FDF3EC;color:var(--ink);font-family:'Frank Ruhl Libre',serif;li
 .gold-text{background:linear-gradient(104deg,#8F3F53 0%,#C27A6B 28%,#C9913F 48%,#E0B070 52%,#C27A6B 72%,#8F3F53 100%);
   background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 7s linear infinite}
 @keyframes shine{0%{background-position:220% 0}100%{background-position:-20% 0}}
-.label{font-family:'Heebo',sans-serif;font-weight:500;font-size:min(3.6vw,1.9vh,14px);letter-spacing:.22em;color:var(--rose-deep)}
+.label{font-family:'Bona Nova',serif;font-weight:700;font-size:min(4.2vw,2.2vh,16px);letter-spacing:.06em;color:var(--rose-deep)}
 .orn{display:flex;align-items:center;justify-content:center;gap:10px;width:62%;margin:min(1.6vh,10px) auto}
 .orn i{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
 .orn b{width:7px;height:7px;transform:rotate(45deg);background:linear-gradient(135deg,var(--gold-lt),var(--gold))}
@@ -146,7 +146,7 @@ body{background:#FDF3EC;color:var(--ink);font-family:'Frank Ruhl Libre',serif;li
 .invite{font-size:min(10.4vw,5.6vh,44px);color:var(--plum)}
 .prow{display:flex;gap:12px;align-items:stretch;margin-top:min(3vh,20px)}
 .prow>div{flex:1}
-.who{font-size:min(5.8vw,3.1vh,23px);font-weight:500;line-height:1.45;margin-top:8px}
+.who{font-size:min(5.8vw,3.1vh,23px);font-weight:700;line-height:1.45;margin-top:8px}
 .vline{flex:0 0 1px!important;background:linear-gradient(transparent,var(--gold) 20%,var(--gold) 80%,transparent);opacity:.6}
 
 /* page 5/6 – lists */
@@ -415,7 +415,7 @@ html.dark .bk{background:radial-gradient(circle,rgba(255,220,190,.85),rgba(232,1
       <div class="title display gold-text a" style="--d:0.24s">העליה לתורה</div>
       <div class="gp">
         <div class="a" style="--d:0.54s">תתקיים אי״ה בשב״ק פרשת וישלח</div>
-        <div class="a" style="--d:0.72s">בחצה״ק בביהכנ״ס של כ״ק אדמו״ר שליט״א</div>
+        <div class="a" style="--d:0.72s">בחצה״ק בביהכנ״ס של<br>כ״ק אדמו״ר שליט״א</div>
         <span class="sep a draw" style="--d:0.96s"></span>
         <div class="a" style="--d:1.14s">תפילת שחרית בשעה <span class="big-time">8:00</span></div>
         <div class="a" style="--d:1.32s">קידושא רבא מיד אחר התפילה</div>
@@ -563,7 +563,7 @@ html.dark .bk{background:radial-gradient(circle,rgba(255,220,190,.85),rgba(232,1
     if(began)return;began=true;go(0);
     play(); // succeeds where the browser allows autoplay; otherwise the first tap starts it
   }
-  try{Promise.all([document.fonts.load('700 40px "Bona Nova"'),document.fonts.load('400 20px "Frank Ruhl Libre"')]).then(begin,begin)}catch(e){begin()}
+  try{Promise.all([document.fonts.load('700 40px "Bona Nova"'),document.fonts.load('400 20px "Bona Nova"')]).then(begin,begin)}catch(e){begin()}
   setTimeout(begin,2500);
 })();
 </script>
