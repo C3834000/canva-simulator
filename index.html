@@ -297,10 +297,6 @@ html.dark .bk{background:radial-gradient(circle,rgba(255,220,190,.85),rgba(232,1
   <!-- 1 · monogram -->
   <section class="scene">
     <div class="mono-box a zoom" style="--d:0.12s"><img src="monogram.png?v=4" alt="מונוגרם"></div>
-    <div class="gate a" style="--d:1.32s">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l10-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></svg>
-      לחצו לפתיחת ההזמנה
-    </div>
   </section>
 
   <!-- 2 · names -->
@@ -466,7 +462,7 @@ html.dark .bk{background:radial-gradient(circle,rgba(255,220,190,.85),rgba(232,1
 
   // ---------- scenes ----------
   var scenes=[].slice.call(document.querySelectorAll('.scene'));
-  var DUR=[0,4000,5500,4200,5200,4500,0];
+  var DUR=[3500,4000,5500,4200,5200,4500,0];
   var bars=document.getElementById('bars');
   bars.innerHTML=scenes.map(function(){return '<span><i></i></span>'}).join('');
   var fills=[].slice.call(bars.querySelectorAll('i'));
