@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#2A1420">
+<title>אריה לייב ושרה עטיא — הזמנה</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bona+Nova:wght@400;700&family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Heebo:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#3B2029;
+  --ink-soft:#7A5560;
+  --rose:#C27A6B;
+  --rose-deep:#A2523F;
+  --plum:#7E3F5C;
+  --gold:#C9913F;
+  --gold-lt:#EBC88A;
+  --cream:#FFF8F2;
+  --line:rgba(162,82,63,.26);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  background:#FDF3EC;color:var(--ink);
+  font-family:'Frank Ruhl Libre',serif;line-height:1.8;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+
+/* ===== living colorful background ===== */
+.bg{position:fixed;inset:0;z-index:0;overflow:hidden;background:
+  linear-gradient(170deg,#FFEFE2 0%,#FDE3E0 28%,#F6DCE8 55%,#FBE6D4 78%,#FFF4E8 100%);}
+.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.62;will-change:transform}
+.b1{width:72vw;height:72vw;background:radial-gradient(circle,#F7B9A3,transparent 68%);top:-18vw;right:-16vw;animation:drift1 22s ease-in-out infinite}
+.b2{width:66vw;height:66vw;background:radial-gradient(circle,#E9A7C8,transparent 68%);top:28vh;left:-22vw;animation:drift2 26s ease-in-out infinite}
+.b3{width:60vw;height:60vw;background:radial-gradient(circle,#F3CE8A,transparent 68%);bottom:4vh;right:-18vw;animation:drift3 30s ease-in-out infinite}
+.b4{width:54vw;height:54vw;background:radial-gradient(circle,#C9A7E0,transparent 70%);bottom:34vh;left:-10vw;animation:drift1 34s ease-in-out infinite reverse}
+@keyframes drift1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-7vw,8vh) scale(1.14)}}
+@keyframes drift2{0%,100%{transform:translate(0,0) scale(1.05)}50%{transform:translate(9vw,-7vh) scale(.92)}}
+@keyframes drift3{0%,100%{transform:translate(0,0) scale(.95)}50%{transform:translate(-9vw,-9vh) scale(1.16)}}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.5;
+  background-image:radial-gradient(rgba(255,255,255,.55) .6px,transparent .7px);background-size:4px 4px;}
+.sheen{position:fixed;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.5) 50%,transparent 65%);
+  background-size:300% 100%;animation:sheen 16s linear infinite;mix-blend-mode:overlay}
+@keyframes sheen{0%{background-position:300% 0}100%{background-position:-60% 0}}
+
+/* gold dust */
+.dust{position:fixed;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+.d{position:absolute;bottom:-6vh;width:5px;height:5px;border-radius:50%;
+  background:radial-gradient(circle,#FFF2D4,rgba(201,145,63,.1));
+  box-shadow:0 0 7px rgba(235,200,138,.95);opacity:0;animation:rise linear infinite}
+@keyframes rise{0%{transform:translate3d(0,0,0) scale(.6);opacity:0}
+12%{opacity:.95}88%{opacity:.6}
+100%{transform:translate3d(10vw,-112vh,0) scale(1.1);opacity:0}}
+
+.wrap{position:relative;z-index:5;max-width:600px;margin:0 auto;padding:0 20px}
+
+/* ===== hero ===== */
+.hero{position:relative;z-index:5;min-height:100svh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;padding:52px 20px 78px}
+.bsd{font-family:'Heebo',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;
+  color:var(--rose-deep);opacity:0;animation:soft 1.4s .2s ease forwards}
+@keyframes soft{to{opacity:1}}
+
+.mono-box{position:relative;width:min(76vw,300px);margin:10px auto 4px}
+.mono-box::after{content:'';position:absolute;inset:-16%;border-radius:50%;z-index:-1;opacity:0;
+  background:radial-gradient(circle,rgba(255,236,214,.95),rgba(247,185,163,.35) 45%,transparent 68%);
+  animation:glow 2.8s .9s ease forwards}
+@keyframes glow{to{opacity:1}}
+.mono{width:100%;display:block;mix-blend-mode:multiply;opacity:0;
+  transform:scale(.84) translateY(16px);filter:blur(7px);
+  animation:monoIn 2.3s .45s cubic-bezier(.19,1,.22,1) forwards}
+@keyframes monoIn{to{opacity:1;transform:scale(1) translateY(0);filter:blur(0)}}
+
+.names{margin-top:6px;width:100%;max-width:540px;opacity:0;animation:soft 1.7s 1.9s ease forwards}
+.nameSvg{width:100%;display:block;filter:drop-shadow(0 8px 18px rgba(176,110,87,.3))}
+.sprig{display:flex;align-items:center;justify-content:center;gap:6px;margin:6px 0 8px}
+.sprig svg{width:66px;height:24px;overflow:visible}
+.hero-date{margin-top:24px;font-family:'Heebo',sans-serif;font-weight:300;font-size:13px;
+  letter-spacing:.22em;color:var(--ink-soft);opacity:0;animation:soft 1.6s 2.5s ease forwards}
+.hero-date em{font-style:normal;color:var(--rose-deep)}
+.cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);opacity:0;animation:soft 1.4s 3.2s ease forwards}
+.cue i{display:block;width:1px;height:40px;background:linear-gradient(var(--gold),transparent);transform-origin:top;animation:cue 2.4s ease-in-out infinite}
+@keyframes cue{0%,100%{transform:scaleY(.35);opacity:.4}50%{transform:scaleY(1);opacity:1}}
+
+/* ===== sections ===== */
+section{padding:46px 0}
+.rev{opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.19,1,.22,1),transform 1s cubic-bezier(.19,1,.22,1)}
+.rev.in{opacity:1;transform:none}
+.orn{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 auto 24px;max-width:240px}
+.orn i{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.orn b{width:8px;height:8px;transform:rotate(45deg);background:linear-gradient(135deg,var(--gold-lt),var(--gold))}
+.eyebrow{text-align:center;font-family:'Heebo',sans-serif;font-weight:300;font-size:11px;
+  letter-spacing:.34em;color:var(--rose-deep);margin-bottom:14px}
+
+.pasuk{text-align:center;font-family:'Bona Nova','Frank Ruhl Libre',serif;font-weight:700;
+  font-size:clamp(27px,8vw,38px);line-height:1.75;color:var(--plum);
+  text-shadow:0 2px 10px rgba(255,255,255,.7)}
+
+/* countdown */
+.cd{display:flex;justify-content:center;gap:9px;direction:ltr}
+.cd div{flex:1;max-width:94px;position:relative;text-align:center;
+  background:linear-gradient(160deg,rgba(255,255,255,.88),rgba(255,244,235,.66));
+  border:1px solid var(--line);border-radius:16px;padding:15px 4px;
+  box-shadow:0 14px 30px -20px rgba(126,63,92,.65)}
+.cd b{display:block;font-family:'Frank Ruhl Libre',serif;font-weight:700;font-size:clamp(25px,7.2vw,31px);
+  color:var(--plum);font-variant-numeric:tabular-nums;line-height:1}
+.cd span{display:block;font-family:'Heebo',sans-serif;font-size:10px;letter-spacing:.14em;color:var(--ink-soft);margin-top:6px}
+
+/* card */
+.card{background:linear-gradient(165deg,rgba(255,255,255,.9),rgba(255,243,234,.72));
+  border:1px solid var(--line);border-radius:22px;padding:26px 20px;
+  box-shadow:0 26px 56px -34px rgba(126,63,92,.7);backdrop-filter:blur(6px)}
+.row{display:flex;gap:14px;padding:14px 0;border-bottom:1px dashed var(--line);align-items:baseline}
+.row:last-of-type{border:0;padding-bottom:2px}
+.row .k{font-family:'Heebo',sans-serif;font-size:11px;letter-spacing:.16em;color:var(--rose-deep);min-width:72px;flex-shrink:0}
+.row .v{font-size:17px;color:var(--ink);line-height:1.65}
+.row .v small{display:block;color:var(--ink-soft);font-size:13.5px;margin-top:3px}
+.times{display:flex;gap:7px;flex-wrap:wrap}
+.times span{background:linear-gradient(135deg,rgba(247,185,163,.4),rgba(233,167,200,.3));
+  border-radius:999px;padding:6px 12px;font-family:'Heebo',sans-serif;font-size:12px;color:var(--ink)}
+.times b{color:var(--rose-deep);font-weight:500}
+
+.btns{display:flex;gap:9px;margin-top:20px}
+.btn{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;
+  padding:14px 8px;border-radius:999px;text-decoration:none;cursor:pointer;
+  font-family:'Heebo',sans-serif;font-size:13.5px;font-weight:400;
+  border:1px solid var(--rose);color:var(--rose-deep);background:rgba(255,255,255,.72);
+  transition:transform .22s}
+.btn.solid{background:linear-gradient(135deg,#C27A6B,#8F3F53);color:#fff;border-color:transparent;
+  box-shadow:0 14px 28px -14px rgba(143,63,83,.9)}
+.btn.gold{background:linear-gradient(135deg,#EBC88A,#C9913F);color:#4A2A10;border-color:transparent;
+  box-shadow:0 14px 28px -14px rgba(201,145,63,.9);margin-top:9px;width:100%}
+.btn:active{transform:scale(.97)}
+.btn svg{width:17px;height:17px;flex-shrink:0}
+.calmenu{display:none;gap:9px;margin-top:9px}
+.calmenu.open{display:flex}
+
+/* parents */
+.parents{text-align:center}
+.parents .intro{font-family:'Bona Nova','Frank Ruhl Libre',serif;font-weight:700;font-size:clamp(23px,6.8vw,30px);color:var(--plum);margin-bottom:24px;line-height:1.75}
+.prow{display:flex;gap:14px;align-items:stretch}
+.prow>div{flex:1}
+.prow .role{font-family:'Heebo',sans-serif;font-size:11px;letter-spacing:.2em;color:var(--rose-deep);margin-bottom:7px}
+.prow .who{font-family:'Frank Ruhl Libre',serif;font-weight:500;font-size:17px;color:var(--ink);line-height:1.65}
+.vline{width:1px;background:linear-gradient(transparent,var(--line) 18%,var(--line) 82%,transparent)}
+.sig{margin-top:22px;font-size:15.5px;color:var(--ink-soft)}
+
+.gp{text-align:center;font-family:'Frank Ruhl Libre',serif;font-weight:400;font-size:16px;color:var(--ink-soft);line-height:2.05}
+.gp i{display:block;width:36px;height:1px;background:var(--line);margin:13px auto}
+
+footer{position:relative;z-index:5;padding:54px 20px 76px;text-align:center}
+.mz{font-family:'Bona Nova',serif;font-weight:700;font-size:clamp(46px,15vw,72px);line-height:1.3;
+  background:linear-gradient(104deg,#8F3F53,#C9913F 45%,#FFF2D8 52%,#C9913F 60%,#8F3F53);
+  background-size:280% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:shine 8s linear infinite;margin-bottom:14px;padding-top:6px}
+@keyframes shine{0%{background-position:280% 0}100%{background-position:-70% 0}}
+
+/* music */
+#mus{position:fixed;bottom:18px;left:18px;z-index:40;width:52px;height:52px;border-radius:50%;
+  border:1px solid var(--line);background:rgba(255,255,255,.88);backdrop-filter:blur(8px);
+  box-shadow:0 14px 30px -14px rgba(126,63,92,.8);display:none;align-items:center;
+  justify-content:center;cursor:pointer;color:var(--rose-deep);transition:transform .25s}
+#mus:active{transform:scale(.92)}
+#mus svg{width:21px;height:21px}
+#mus .pz{display:none}
+#mus.on .pl{display:none}
+#mus.on .pz{display:block}
+#mus.on::after{content:'';position:absolute;inset:-5px;border-radius:50%;
+  border:1px solid var(--gold-lt);animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{transform:scale(.92);opacity:.9}100%{transform:scale(1.35);opacity:0}}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}
+.rev{opacity:1;transform:none}.mono,.names,.bsd,.hero-date,.cue{opacity:1;transform:none;filter:none}}
+</style>
+</head>
+<body>
+
+<div class="bg"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><i class="blob b4"></i></div>
+<div class="grain"></div>
+<div class="sheen"></div>
+<div class="dust" id="dust"></div>
+
+<audio id="aud" src="music.mp3" loop preload="metadata"></audio>
+<button id="mus" aria-label="מוזיקת רקע">
+  <svg class="pl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l10-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></svg>
+  <svg class="pz" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 5v14M15 5v14"/></svg>
+</button>
+
+<header class="hero">
+  <div class="bsd">בעזהשי״ת</div>
+  <div class="mono-box"><img class="mono" src="monogram.png" alt="מונוגרם"></div>
+  <div class="names">
+    <svg class="nameSvg" viewBox="0 0 440 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="אריה לייב">
+      <defs>
+        <linearGradient id="rg" x1="0" y1="0" x2="1" y2="0.35">
+          <stop offset="0" stop-color="#D79070"/>
+          <stop offset=".22" stop-color="#F0C0A6"/>
+          <stop offset=".42" stop-color="#FDEADF"/>
+          <stop offset=".58" stop-color="#EDB492"/>
+          <stop offset=".8" stop-color="#DC9B78"/>
+          <stop offset="1" stop-color="#C97E5C"/>
+        </linearGradient>
+        <linearGradient id="shineG" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+          <stop offset=".5" stop-color="#fff" stop-opacity=".75"/>
+          <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+          <animateTransform attributeName="gradientTransform" type="translate" from="-1 0" to="1 0" dur="6s" repeatCount="indefinite"/>
+        </linearGradient>
+        <g id="nm1"><text x="220" y="100" text-anchor="middle" font-family="Bona Nova, serif" font-weight="700" font-size="96">אריה לייב</text></g>
+        <clipPath id="c1"><use href="#nm1"/></clipPath>
+      </defs>
+      <use href="#nm1" fill="none" stroke="#B5704E" stroke-width="5" stroke-linejoin="round"/>
+      <use href="#nm1" fill="none" stroke="#F6DCCB" stroke-width="2.2" stroke-linejoin="round"/>
+      <use href="#nm1" fill="url(#rg)"/>
+      <rect x="0" y="0" width="440" height="128" fill="url(#shineG)" clip-path="url(#c1)"/>
+    </svg>
+
+    <div class="sprig">
+      <svg viewBox="0 0 80 28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="lf" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#F3CDB8"/><stop offset="1" stop-color="#D18E6C"/>
+          </linearGradient>
+          <radialGradient id="pl"><stop offset="0" stop-color="#FFF8F1"/><stop offset="1" stop-color="#EBCDB8"/></radialGradient>
+        </defs>
+        <path d="M78 14 H30" stroke="#C98166" stroke-width="1.2" fill="none"/>
+        <path d="M58 14c-6-7-14-8-18-6 2 5 11 9 18 6z" fill="url(#lf)" stroke="#C98166" stroke-width="1"/>
+        <path d="M48 14c-6 7-14 8-18 6 2-5 11-9 18-6z" fill="url(#lf)" stroke="#C98166" stroke-width="1"/>
+        <circle cx="26" cy="14" r="3.4" fill="url(#pl)" stroke="#D7A98E" stroke-width=".8"/>
+      </svg>
+      <svg viewBox="0 0 80 28" xmlns="http://www.w3.org/2000/svg" style="transform:scaleX(-1)" aria-hidden="true">
+        <path d="M78 14 H30" stroke="#C98166" stroke-width="1.2" fill="none"/>
+        <path d="M58 14c-6-7-14-8-18-6 2 5 11 9 18 6z" fill="url(#lf)" stroke="#C98166" stroke-width="1"/>
+        <path d="M48 14c-6 7-14 8-18 6 2-5 11-9 18-6z" fill="url(#lf)" stroke="#C98166" stroke-width="1"/>
+        <circle cx="26" cy="14" r="3.4" fill="url(#pl)" stroke="#D7A98E" stroke-width=".8"/>
+      </svg>
+    </div>
+
+    <svg class="nameSvg" viewBox="0 0 440 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="שרה עטיא">
+      <defs>
+        <g id="nm2"><text x="220" y="100" text-anchor="middle" font-family="Bona Nova, serif" font-weight="700" font-size="96">שרה עטיא</text></g>
+        <clipPath id="c2"><use href="#nm2"/></clipPath>
+      </defs>
+      <use href="#nm2" fill="none" stroke="#B5704E" stroke-width="5" stroke-linejoin="round"/>
+      <use href="#nm2" fill="none" stroke="#F6DCCB" stroke-width="2.2" stroke-linejoin="round"/>
+      <use href="#nm2" fill="url(#rg)"/>
+      <rect x="0" y="0" width="440" height="128" fill="url(#shineG)" clip-path="url(#c2)"/>
+    </svg>
+  </div>
+  <div class="hero-date">כ״ב כסלו תשפ״ז <em>·</em> 2.12.26 <em>·</em> ביתר עילית</div>
+  <div class="cue"><i></i></div>
+</header>
+
+<main class="wrap">
+
+  <section class="rev">
+    <div class="orn"><i></i><b></b><i></i></div>
+    <p class="pasuk">נַעֲלֶה אֶת יְרוּשָׁלַיִם<br>עַל רֹאשׁ שִׂמְחָתֵנוּ</p>
+    <div class="orn" style="margin:24px auto 0"><i></i><b></b><i></i></div>
+  </section>
+
+  <section class="rev">
+    <div class="eyebrow">הזמן מתקרב</div>
+    <div class="cd" id="cd">
+      <div><b id="d">0</b><span>ימים</span></div>
+      <div><b id="h">0</b><span>שעות</span></div>
+      <div><b id="m">0</b><span>דקות</span></div>
+      <div><b id="s">0</b><span>שניות</span></div>
+    </div>
+  </section>
+
+  <section class="rev">
+    <div class="card">
+      <div class="row">
+        <div class="k">מתי</div>
+        <div class="v">יום רביעי פרשת וישב
+          <small>כ״ב כסלו תשפ״ז · 2.12.26</small>
+        </div>
+      </div>
+      <div class="row">
+        <div class="k">איפה</div>
+        <div class="v">אולם ״היכלי הברכה״
+          <small>רח׳ רבי עקיבא 34, ביתר עילית</small>
+        </div>
+      </div>
+      <div class="row">
+        <div class="k">סדר היום</div>
+        <div class="v">
+          <div class="times">
+            <span>קבלת פנים <b>17:00</b></span>
+            <span>חופה <b>17:30</b></span>
+            <span>שמחת חתן וכלה <b>20:30</b></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="btns">
+        <a class="btn solid" target="_blank" rel="noopener" href="https://waze.com/ul?q=%D7%A8%D7%91%D7%99%20%D7%A2%D7%A7%D7%99%D7%91%D7%90%2034%20%D7%91%D7%99%D7%AA%D7%A8%20%D7%A2%D7%99%D7%9C%D7%99%D7%AA&navigate=yes">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.5 7-11a7 7 0 1 0-14 0c0 4.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          ניווט בוויז
+        </a>
+        <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%D7%A8%D7%91%D7%99%20%D7%A2%D7%A7%D7%99%D7%91%D7%90%2034%20%D7%91%D7%99%D7%AA%D7%A8%20%D7%A2%D7%99%D7%9C%D7%99%D7%AA">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3 3 5.5v15L9 18l6 3 6-2.5v-15L15 6 9 3z"/><path d="M9 3v15M15 6v15"/></svg>
+          מפות
+        </a>
+      </div>
+
+      <button class="btn gold" id="calBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18M12 14v4M10 16h4"/></svg>
+        הוספה ליומן
+      </button>
+      <div class="calmenu" id="calMenu">
+        <a class="btn" id="gcal" target="_blank" rel="noopener" href="#">Google Calendar</a>
+        <a class="btn" id="ical" href="#">יומן אייפון / ICS</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="rev">
+    <div class="parents">
+      <div class="intro">נשמח לראותכם<br>משתתפים בשמחתינו</div>
+      <div class="prow">
+        <div>
+          <div class="role">הורי החתן</div>
+          <div class="who">הר״ר יוסף כהן<br>ורעייתו</div>
+        </div>
+        <div class="vline"></div>
+        <div>
+          <div class="role">הורי הכלה</div>
+          <div class="who">הר״ר משה יוסף עהרליך<br>ורעייתו</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rev">
+    <div class="orn"><i></i><b></b><i></i></div>
+    <div class="eyebrow">תפארת בנים אבותם</div>
+    <div class="gp">
+      הר״ר מרדכי יונה כהן ורעייתו<br>
+      הר״ר יעקב יחזקי׳ אינדיג ורעייתו
+      <i></i>
+      הר״ר דב בער עהרליך ורעייתו<br>
+      הר״ר צבי יהודה פילטשיק ורעייתו
+      <i></i>
+      מרת גיטל פילטשיק<br>
+      אשת הרה״ח ר׳ ישראל פילטשיק ז״ל
+    </div>
+  </section>
+
+  <section class="rev">
+    <div class="card">
+      <div class="eyebrow" style="margin-bottom:12px">העליה לתורה</div>
+      <div class="gp" style="font-size:15px">
+        תתקיים אי״ה בשב״ק פרשת וישלח<br>
+        בחצה״ק בביהכנ״ס של כ״ק אדמו״ר שליט״א
+        <i></i>
+        שחרית בשעה <b style="color:var(--rose-deep);font-weight:500">8:00</b><br>
+        קידושא רבא מיד אחר התפילה
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rev">
+  <div class="orn"><i></i><b></b><i></i></div>
+  <div class="mz">מזל טוב</div>
+</footer>
+
+<script>
+(function(){
+  // gold dust
+  var box=document.getElementById('dust'),n=window.innerWidth<520?14:22,h='';
+  for(var i=0;i<n;i++){
+    var l=Math.random()*100,du=(Math.random()*12+14).toFixed(1),dl=(Math.random()*20).toFixed(1),sc=(Math.random()*.9+.5).toFixed(2);
+    h+='<span class="d" style="left:'+l+'%;animation-duration:'+du+'s;animation-delay:-'+dl+'s;transform:scale('+sc+')"></span>';
+  }
+  box.innerHTML=h;
+
+  // reveal
+  var els=document.querySelectorAll('.rev');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},
+      {threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  } else { els.forEach(function(e){e.classList.add('in')}); }
+
+  // countdown
+  var target=new Date('2026-12-02T17:30:00+02:00').getTime();
+  var D=document.getElementById('d'),H=document.getElementById('h'),M=document.getElementById('m'),S=document.getElementById('s');
+  function pad(x){return x<10?'0'+x:''+x}
+  (function tick(){
+    var t=target-Date.now();
+    if(t<0){document.getElementById('cd').innerHTML='<div style="max-width:none;flex:1"><b style="font-size:26px">בשעה טובה ומוצלחת!</b></div>';return}
+    D.textContent=Math.floor(t/864e5);
+    H.textContent=pad(Math.floor(t/36e5)%24);
+    M.textContent=pad(Math.floor(t/6e4)%60);
+    S.textContent=pad(Math.floor(t/1e3)%60);
+    setTimeout(tick,1000);
+  })();
+
+  // calendar
+  var TITLE='חתונת אריה לייב ושרה עטיא',
+      LOC='אולם היכלי הברכה, רח׳ רבי עקיבא 34, ביתר עילית',
+      DESC='קבלת פנים 17:00 | חופה 17:30 | שמחת חתן וכלה 20:30',
+      S_UTC='20261202T150000Z', E_UTC='20261202T210000Z';
+  document.getElementById('gcal').href=
+    'https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(TITLE)+
+    '&dates='+S_UTC+'/'+E_UTC+'&location='+encodeURIComponent(LOC)+'&details='+encodeURIComponent(DESC);
+  var ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//wedding//HE','CALSCALE:GREGORIAN','BEGIN:VEVENT',
+    'UID:'+Date.now()+'@wedding','DTSTAMP:'+S_UTC,'DTSTART:'+S_UTC,'DTEND:'+E_UTC,
+    'SUMMARY:'+TITLE,'LOCATION:'+LOC,'DESCRIPTION:'+DESC,
+    'BEGIN:VALARM','TRIGGER:-PT3H','ACTION:DISPLAY','DESCRIPTION:'+TITLE,'END:VALARM',
+    'END:VEVENT','END:VCALENDAR'].join('\r\n');
+  var il=document.getElementById('ical');
+  il.href='#';
+  il.addEventListener('click',function(ev){
+    ev.preventDefault();
+    if(window.claude&&claude.use){
+      claude.use('downloads').then(function(dl){
+        if(dl){dl.save({filename:'wedding.ics',data:ics}).catch(function(){})}
+        else{fallbackIcs()}
+      }).catch(fallbackIcs);
+    } else { fallbackIcs(); }
+  });
+  function fallbackIcs(){
+    try{
+      var b=new Blob([ics],{type:'text/calendar;charset=utf-8'});
+      var u=URL.createObjectURL(b),a=document.createElement('a');
+      a.href=u;a.download='wedding.ics';document.body.appendChild(a);a.click();
+      setTimeout(function(){URL.revokeObjectURL(u);a.remove()},1500);
+    }catch(e){}
+  }
+  var cb=document.getElementById('calBtn'),cm=document.getElementById('calMenu');
+  cb.addEventListener('click',function(){cm.classList.toggle('open')});
+
+  // music
+  var aud=document.getElementById('aud'),btn=document.getElementById('mus');
+  btn.style.display='flex';
+  aud.addEventListener('error',function(){btn.style.display='none'});
+  aud.volume=0; aud.load();
+  function fade(to,done){
+    var step=(to-aud.volume)/22;
+    var iv=setInterval(function(){
+      var v=aud.volume+step;
+      if(v<=0){aud.volume=0;clearInterval(iv);done&&done()}
+      else if(v>=to&&step>0){aud.volume=to;clearInterval(iv);done&&done()}
+      else{aud.volume=Math.max(0,Math.min(1,v))}
+    },45);
+  }
+  btn.addEventListener('click',function(){
+    if(aud.paused){aud.play().then(function(){btn.classList.add('on');fade(.55)}).catch(function(){})}
+    else{fade(0,function(){aud.pause();btn.classList.remove('on')})}
+  });
+  document.addEventListener('visibilitychange',function(){
+    if(document.hidden&&!aud.paused){aud.pause();btn.classList.remove('on')}
+  });
+})();
+</script>
+</body>
+</html>
