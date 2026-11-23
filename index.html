@@ -20,7 +20,7 @@ var m=document.querySelector('meta[name=theme-color]');if(m)m.content=t==='dark'
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{height:100%;overflow:hidden;overscroll-behavior:none}
-body{background:#FDF3EC;color:var(--ink);font-family:'Bona Nova',serif;font-weight:700;line-height:1.6;
+body{background:#FDF3EC;color:var(--ink);font-family:'Bona Nova',serif;font-weight:400;line-height:1.6;
   -webkit-font-smoothing:antialiased;font-variant-numeric:lining-nums;touch-action:manipulation;user-select:none;-webkit-user-select:none}
 
 /* ===== living background ===== */
@@ -85,7 +85,7 @@ body{background:#FDF3EC;color:var(--ink);font-family:'Bona Nova',serif;font-weig
 .gold-text{background:linear-gradient(104deg,#8F3F53 0%,#C27A6B 28%,#C9913F 48%,#E0B070 52%,#C27A6B 72%,#8F3F53 100%);
   background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 7s linear infinite}
 @keyframes shine{0%{background-position:220% 0}100%{background-position:-20% 0}}
-.label{font-family:'Bona Nova',serif;font-weight:700;font-size:min(4.2vw,2.2vh,16px);letter-spacing:.06em;color:var(--rose-deep)}
+.label{font-family:'Bona Nova',serif;font-weight:400;font-size:min(4.2vw,2.2vh,16px);letter-spacing:.06em;color:var(--rose-deep)}
 .orn{display:flex;align-items:center;justify-content:center;gap:10px;width:62%;margin:min(1.6vh,10px) auto}
 .orn i{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
 .orn b{width:7px;height:7px;transform:rotate(45deg);background:linear-gradient(135deg,var(--gold-lt),var(--gold))}
@@ -140,13 +140,13 @@ body{background:#FDF3EC;color:var(--ink);font-family:'Bona Nova',serif;font-weig
 .medal.main .c{width:min(25vw,13.2vh,102px);height:min(25vw,13.2vh,102px);background:linear-gradient(145deg,#D99780,#8F3F53);border-color:transparent}
 .medal.main .c b{color:#fff;font-size:min(7vw,3.8vh,29px)}
 .medal span{font-size:min(4.4vw,2.4vh,17px);line-height:1.2;color:var(--ink)}
-.medal.main span{font-weight:700;color:var(--rose-deep)}
+.medal.main span{color:var(--rose-deep)}
 
 /* page 4 – parents */
 .invite{font-size:min(10.4vw,5.6vh,44px);color:var(--plum)}
 .prow{display:flex;gap:12px;align-items:stretch;margin-top:min(3vh,20px)}
 .prow>div{flex:1}
-.who{font-size:min(5.8vw,3.1vh,23px);font-weight:700;line-height:1.45;margin-top:8px}
+.who{font-size:min(5.8vw,3.1vh,23px);font-weight:400;line-height:1.45;margin-top:8px}
 .vline{flex:0 0 1px!important;background:linear-gradient(transparent,var(--gold) 20%,var(--gold) 80%,transparent);opacity:.6}
 
 /* page 5/6 – lists */
@@ -154,14 +154,14 @@ body{background:#FDF3EC;color:var(--ink);font-family:'Bona Nova',serif;font-weig
 .gp{font-size:min(5.3vw,2.85vh,21px);line-height:1.8}
 .gp small{display:block;font-size:.85em;color:var(--ink-soft);line-height:1.4}
 .sep{display:block;width:54px;height:1px;background:var(--gold);opacity:.7;margin:min(1.8vh,13px) auto}
-.big-time{font-family:'Bona Nova',serif;font-weight:700;color:var(--rose-deep)}
+.big-time{font-family:'Bona Nova',serif;font-weight:400;color:var(--rose-deep)}
 
 /* page 7 – final */
 .mini{width:min(30vw,15vh,124px);display:block}
 .fnames{font-size:min(9.4vw,5vh,42px);white-space:nowrap;margin-top:2px}
 .fnames em{font-style:normal;font-size:.5em;margin:0 .35em;vertical-align:middle;-webkit-text-fill-color:var(--gold)}
 .finfo{font-size:min(4.6vw,2.5vh,18px);color:var(--ink-soft);line-height:1.55;margin-top:4px}
-.finfo b{color:var(--rose-deep)}
+.finfo b{color:var(--rose-deep);font-weight:400}
 .btns{display:flex;gap:7px;width:100%}
 .btn{flex:1;display:flex;align-items:center;justify-content:center;gap:5px;padding:12px 4px;border-radius:999px;
   text-decoration:none;cursor:pointer;font-family:'Heebo',sans-serif;font-size:13.5px;
