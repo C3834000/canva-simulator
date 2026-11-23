@@ -7,6 +7,8 @@
 <title>אריה לייב ושרה עטיא — הזמנה</title>
 <meta property="og:title" content="הזמנה לחתונת אריה לייב ושרה עטיא">
 <meta property="og:description" content="כ״ב כסלו תשפ״ז · 2.12.26 · אולם היכלי הברכה, ביתר עילית">
+<script>(function(){var t=(location.search.match(/theme=(\w+)/)||[])[1]||'dark';document.documentElement.className=t;
+var m=document.querySelector('meta[name=theme-color]');if(m)m.content=t==='dark'?'#2B0F1C':(t==='ivory'?'#FBF6EF':'#FDE6DC');})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:wght@400;700&family=Frank+Ruhl+Libre:wght@400;500;700&family=Heebo:wght@300;400;500&display=swap" rel="stylesheet">
@@ -178,6 +180,78 @@ body{background:#FDF3EC;color:var(--ink);font-family:'Frank Ruhl Libre',serif;li
   font-family:'Heebo',sans-serif;font-size:12.5px;color:var(--ink-soft);box-shadow:0 8px 18px -12px rgba(126,63,92,.6)}
 .count svg{width:14px;height:14px;color:var(--gold)}
 .count b{font-family:'Bona Nova',serif;font-weight:700;font-size:14px;color:var(--plum);font-variant-numeric:lining-nums tabular-nums}
+
+/* ===== shared luxury layers ===== */
+.pattern{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.09;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23C9913F' stroke-width='.7'%3E%3Cpath d='M28 2 54 28 28 54 2 28Z'/%3E%3Cpath d='M28 12 44 28 28 44 12 28Z' opacity='.6'/%3E%3C/g%3E%3Cg fill='%23C9913F'%3E%3Ccircle cx='28' cy='28' r='1.8'/%3E%3Ccircle cx='0' cy='0' r='1.4'/%3E%3Ccircle cx='56' cy='0' r='1.4'/%3E%3Ccircle cx='0' cy='56' r='1.4'/%3E%3Ccircle cx='56' cy='56' r='1.4'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:56px 56px;
+  -webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 50%,transparent 30%,#000 95%);
+          mask-image:radial-gradient(ellipse 70% 60% at 50% 50%,transparent 30%,#000 95%)}
+.bokeh{position:fixed;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+.bk{position:absolute;border-radius:50%;filter:blur(1.5px);opacity:0;animation:bk ease-in-out infinite}
+@keyframes bk{0%,100%{opacity:0;transform:translateY(0) scale(.9)}50%{opacity:var(--o,.35);transform:translateY(-6vh) scale(1.05)}}
+.scene::before{content:'';position:absolute;left:50%;top:50%;width:150vmin;height:150vmin;pointer-events:none;
+  transform:translate(-50%,-50%) scale(.55);border-radius:50%;opacity:0;
+  background:radial-gradient(circle,var(--flare,rgba(255,226,186,.35)),transparent 58%)}
+.scene.on::before{animation:flare 1.8s ease-out both}
+@keyframes flare{0%{opacity:0;transform:translate(-50%,-50%) scale(.55)}35%{opacity:1}100%{opacity:.55;transform:translate(-50%,-50%) scale(1)}}
+
+/* ===== theme: IVORY & GOLD ===== */
+html.ivory{--ink:#3A1A24;--ink-soft:#7B5A52;--plum:#5B1F33;--rose-deep:#8C3B3B;--line:rgba(184,134,59,.35);--flare:rgba(255,236,200,.55)}
+html.ivory .bg{background:linear-gradient(170deg,#FFFCF7 0%,#F9F1E6 45%,#F3E6D4 100%)}
+html.ivory .b1{background:radial-gradient(circle,#F1D9B5,transparent 66%)}
+html.ivory .b2{background:radial-gradient(circle,#EED6CB,transparent 66%)}
+html.ivory .b3{background:radial-gradient(circle,#EBD3A2,transparent 66%)}
+html.ivory .b4{background:radial-gradient(circle,#F6E6D2,transparent 68%)}
+html.ivory .blob{opacity:.55}
+html.ivory .gold-text{background-image:linear-gradient(104deg,#6E4419 0%,#A87830 22%,#D4A653 42%,#E8C27A 50%,#B8863B 62%,#8A5A22 80%,#6E4419 100%)}
+html.ivory .frame{background:linear-gradient(170deg,rgba(255,255,255,.86),rgba(253,248,240,.75));border-color:rgba(184,134,59,.7);
+  box-shadow:0 30px 60px -30px rgba(122,78,34,.45),inset 0 0 0 6px rgba(255,255,255,.5),inset 0 0 0 7px rgba(184,134,59,.45)}
+html.ivory .medal.main .c{background:linear-gradient(145deg,#E8C27A,#9A6A2C)}
+html.ivory .btn.solid{background:linear-gradient(135deg,#7A2B40,#4A1424)}
+html.ivory .bars i{background:linear-gradient(90deg,#B8863B,#E8C27A)}
+html.ivory .bk{background:radial-gradient(circle,rgba(255,240,205,.9),rgba(232,194,122,.15) 60%,transparent 70%)}
+
+/* ===== theme: VELVET WINE & ROSE-GOLD (dark) ===== */
+html.dark{--ink:#F7E9DD;--ink-soft:#D9BBAA;--plum:#F6DCC8;--rose-deep:#EDB49A;--gold:#E8C27A;--line:rgba(232,194,122,.32);--flare:rgba(255,190,160,.22)}
+html.dark body{background:#1C0A12}
+html.dark .bg{background:radial-gradient(130% 85% at 50% 38%,#6E2B42 0%,#3E1627 42%,#1C0A12 100%)}
+html.dark .blob{opacity:.3;mix-blend-mode:screen}
+html.dark .b1{background:radial-gradient(circle,#C9784F,transparent 64%)}
+html.dark .b2{background:radial-gradient(circle,#9A3F63,transparent 64%)}
+html.dark .b3{background:radial-gradient(circle,#B8863B,transparent 64%)}
+html.dark .b4{background:radial-gradient(circle,#5E2A6E,transparent 66%)}
+html.dark .grain{opacity:.12}
+html.dark .sheen{opacity:.35}
+html.dark .pattern{opacity:.13}
+html.dark .gold-text{background-image:linear-gradient(104deg,#B8863B 0%,#E8C27A 22%,#FFF3D6 42%,#F4D58D 52%,#C9913F 70%,#F4D58D 88%,#B8863B 100%)}
+html.dark .nameSvg{filter:drop-shadow(0 0 22px rgba(240,180,150,.35)) drop-shadow(0 6px 10px rgba(0,0,0,.35))}
+html.dark .mono-box::before{background:radial-gradient(circle,rgba(255,205,175,.42),rgba(201,120,90,.18) 45%,transparent 68%)}
+html.dark .mono-box img{filter:drop-shadow(0 0 26px rgba(255,190,160,.35))}
+html.dark .frame{background:linear-gradient(170deg,rgba(74,26,44,.78),rgba(34,11,22,.72));border-color:rgba(232,194,122,.65);
+  box-shadow:0 34px 70px -30px rgba(0,0,0,.85),inset 0 0 0 6px rgba(0,0,0,.18),inset 0 0 0 7px rgba(232,194,122,.38)}
+html.dark .medal .c{background:radial-gradient(circle at 35% 30%,#5A2238,#260C18);border-color:#E8C27A;
+  box-shadow:0 10px 24px -10px rgba(0,0,0,.8),inset 0 0 0 4px rgba(0,0,0,.2),inset 0 0 0 5px rgba(232,194,122,.4)}
+html.dark .medal .c b{color:#F4D58D}
+html.dark .medal.main .c{background:linear-gradient(145deg,#FFF0C8,#E8C27A 40%,#B8863B)}
+html.dark .medal.main .c b{color:#3A1424}
+html.dark .medal span{color:var(--ink)}
+html.dark .medal.main span{color:#F4D58D}
+html.dark #mus,html.dark .count,html.dark .gate{background:rgba(40,13,25,.72);border-color:rgba(232,194,122,.5);color:#F3D9C6;box-shadow:0 10px 24px -12px rgba(0,0,0,.8)}
+html.dark .gate::after{border-color:rgba(232,194,122,.6)}
+html.dark .count svg{color:#E8C27A}
+html.dark .count b{color:#F4D58D}
+html.dark .bsd{color:#E8C27A}
+html.dark .bars span{background:rgba(255,255,255,.14)}
+html.dark .bars i{background:linear-gradient(90deg,#B8863B,#F4D58D)}
+html.dark .btn{background:rgba(40,13,25,.6);border-color:rgba(232,194,122,.6);color:#F3D9C6}
+html.dark .btn.solid{background:linear-gradient(135deg,#F4D58D,#C9913F);color:#3A1424;border-color:transparent}
+html.dark .btn.gold{background:linear-gradient(135deg,#E8A994,#B5704E);color:#2B0F1C;border-color:transparent}
+html.dark .replay{color:#E8C27A}
+html.dark .who,html.dark .gp{color:var(--ink)}
+html.dark .pasuk{color:#F6DCC8}
+html.dark .bk{background:radial-gradient(circle,rgba(255,220,190,.85),rgba(232,170,140,.15) 60%,transparent 70%)}
+
 @media (prefers-reduced-motion:reduce){.blob,.sheen,.d{animation:none!important}}
 </style>
 </head>
@@ -202,6 +276,8 @@ body{background:#FDF3EC;color:var(--ink);font-family:'Frank Ruhl Libre',serif;li
 <div class="bg"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><i class="blob b4"></i></div>
 <div class="grain"></div>
 <div class="sheen"></div>
+<div class="pattern"></div>
+<div class="bokeh" id="bokeh"></div>
 <div class="dust" id="dust"></div>
 
 <div class="bars" id="bars"></div>
@@ -380,6 +456,13 @@ body{background:#FDF3EC;color:var(--ink);font-family:'Frank Ruhl Libre',serif;li
        's;animation-delay:-'+(Math.random()*20).toFixed(1)+'s;transform:scale('+(Math.random()*.9+.5).toFixed(2)+')"></span>';
   }
   box.innerHTML=h;
+  var bk=document.getElementById('bokeh'),bh='';
+  for(var j=0;j<9;j++){
+    var sz=(Math.random()*70+30)|0;
+    bh+='<span class="bk" style="width:'+sz+'px;height:'+sz+'px;left:'+(Math.random()*95)+'%;top:'+(Math.random()*90)+
+        '%;--o:'+(Math.random()*.35+.2).toFixed(2)+';animation-duration:'+(Math.random()*8+9).toFixed(1)+'s;animation-delay:-'+(Math.random()*12).toFixed(1)+'s"></span>';
+  }
+  bk.innerHTML=bh;
 
   // ---------- scenes ----------
   var scenes=[].slice.call(document.querySelectorAll('.scene'));
